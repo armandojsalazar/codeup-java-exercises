@@ -142,6 +142,27 @@ public class JavaBasicExercises {
         System.out.println(4.0 * (1-(1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11)));
 
 
+//11. Write a Java program to print the area and perimeter of a circle. Go to the editor
+//Test Data:
+//Radius = 7.5
+//Expected Output
+//Perimeter is = 47.12388980384689
+//Area is = 176.71458676442586
+
+        System.out.println("Question 11's Answer:");
+        float radius = 7.5f;
+        float pi = 3.14f;
+
+        float area = (radius * radius) * pi;
+        float perimeter = 2 * pi * radius;
+
+        System.out.println("Perimeter is = " + perimeter);
+        System.out.println("Area is = " + area);
+
+
+
+
+
 
     }
 }
