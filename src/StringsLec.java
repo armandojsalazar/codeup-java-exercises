@@ -54,5 +54,20 @@ public class StringsLec {
         System.out.println("First index = " + email.indexOf("o"));
         System.out.println("Last index = " + email.lastIndexOf("o"));
 
+
+        System.out.println("studentEmail.length() = " + studentEmail.length());
+        email = email.replace(".com", ".org");
+        System.out.println("org email = " + email);
+
+        //will not include the indexOf(2). Will just show "fe"
+        System.out.println("email.substring(0,2) = " + email.substring(0,2));
+
+
+
+
+
+
+
+
     }
 }
