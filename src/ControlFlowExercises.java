@@ -50,23 +50,23 @@ public class ControlFlowExercises {
         //#1 c. For
         // Refactor the previous two exercises to use a for loop instead.
 
-            for(int e = 0; e <= 15; e++){
-                System.out.println(e);
-            }
+        for (int e = 0; e <= 15; e++) {
+            System.out.println(e);
+        }
 
-            for(int f = 0; f <= 100; f += 2){
-                System.out.println(f);
-            }
+        for (int f = 0; f <= 100; f += 2) {
+            System.out.println(f);
+        }
 
-            for (int g = 100; g >= -10; g -= 5){
-                System.out.println(g);
-            }
+        for (int g = 100; g >= -10; g -= 5) {
+            System.out.println(g);
+        }
 
-            for(long h = 2; h <= 1000000; h *= h){
-                System.out.println(h);
-            }
+        for (long h = 2; h <= 1000000; h *= h) {
+            System.out.println(h);
+        }
 
-            //#2 Fizzbuzz
+        //#2 Fizzbuzz
         //
         //One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
         //
@@ -75,14 +75,14 @@ public class ControlFlowExercises {
         //For the multiples of five: print “Buzz”.
         //For numbers which are multiples of both three and five: print “FizzBuzz”.
 
-        for(int j = 1; j <= 100; j++){
-            if(j % 15 == 0){
+        for (int j = 1; j <= 100; j++) {
+            if (j % 15 == 0) {
                 System.out.println("FizzBuzz " + j);
-            } else if (j % 5 == 0){
+            } else if (j % 5 == 0) {
                 System.out.println("Buzz " + j);
-            }else if(j % 3 == 0){
+            } else if (j % 3 == 0) {
                 System.out.println("Fizz " + j);
-            } else{
+            } else {
                 System.out.println(j);
             }
         }
@@ -90,19 +90,39 @@ public class ControlFlowExercises {
         //#3 Display a table of powers
 
         Scanner sc = new Scanner(System.in);
+        boolean userContinues = true;
         System.out.println("What number would you like to go up?");
         int userInput = sc.nextInt();
-        Formatter l = new Formatter();
-        l.format("%-6s %1s %-7s %1s %-6s", "Number", "|", "Squared", "|", "Cubed");
-        l.format("%-6s %1s %-7s %1s %-6s", "------", "|", "------", "|", "------");
-
-        for(int k = 1; k <= userInput; k++){
-            l.format("%-6s %1s %-7s %1s %-6s", k, "|", (int)Math.pow(k, 2), "|", (int)Math.pow(k, 3));
+        System.out.println("Here's your table:");
+        System.out.println("");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for (int k = 1; k <= userInput; k++) {
+            System.out.printf("%-6d", k);
+            System.out.print(" | ");
+            System.out.printf("%-7d", k * k);
+            System.out.print(" | ");
+            System.out.print(k * k * k);
+            System.out.println();
         }
-        System.out.println(l);
+        System.out.println("Would you like to enter another number (y/n)?");
+        String userResponse = sc.next();
+        if (!userResponse.equalsIgnoreCase("y")) {
+            userContinues = false;
+        }
+        while (userContinues) ;
+    }
+//        Formatter l = new Formatter();
+//        l.format("%-6s %1s %-7s %1s %-6s", "Number", "|", "Squared", "|", "Cubed");
+//        l.format("%-6s %1s %-7s %1s %-6s", "------", "|", "------", "|", "------");
+//
+//        for(int k = 1; k <= userInput; k++){
+//            l.format("%-6s %1s %-7s %1s %-6s", k, "|", (int)Math.pow(k, 2), "|", (int)Math.pow(k, 3));
+//        }
+//        System.out.println(l);
 
 
 
     }
-    }
+
 
