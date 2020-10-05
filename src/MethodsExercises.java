@@ -2,18 +2,33 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
         //#1 Basic Arithmetic
-        sum(3, 5);
-        sub(10, 4);
-        multiple(5, 6);
-        divide(144, 12);
-        System.out.println(mod(26, 5));
+//        sum(3, 5);
+//        sub(10, 4);
+//        multiple(5, 6);
+//        divide(144, 12);
+//        System.out.println(mod(26, 5));
 
         //#2
-        System.out.println(getInteger(1, 10));
-        System.out.println(getInteger(5, 8));
+//        System.out.println(getInteger(1, 10));
+//        System.out.println(getInteger(5, 8));
 
+        //#3
+        /*while(true) {
+            System.out.println(factorial());
+            System.out.println("Do you want to continue [y,n]");
+            String answer = scan.nextLine();
+            if(answer.equalsIgnoreCase("n")){
+                System.out.println("Okay, bye");
+                break;
+            }
+
+        }*/
+
+        //#4
+        rollDice(scan);
     }
 
     //#1
@@ -61,7 +76,34 @@ public class MethodsExercises {
 
     //#3
 
+        public static long factorial(){
+          int userInput = getInteger(1, 10);
+          long output = 1;
+          for (int counter = 1; counter <= userInput; counter++){
+              output *= counter;
+          }
+          return output;
+        };
 
+        //#4
+    public static void randomize(short sides){
+        System.out.println("The first die rolled a: " + (int) Math.floor(Math.random() * sides + 1));
+        System.out.println("The second die rolled a: " + (int) Math.floor(Math.random() * sides + 1));
+    }
 
+        public static void rollDice(Scanner scan){
+        int counter = 0;
+            while(true){
+                System.out.println("roll Dice method");
+                System.out.println("Number of sides: ");
+                short sides = Short.parseShort(scan.nextLine());
+                randomize(sides);
+                System.out.println("Do you want to continue [y,n]");
+                if(scan.nextLine().equalsIgnoreCase("n")){
+                    System.out.println("Okay, bye! you played " + counter + " times");
+                    break;
+                }
+            }
+        }
 
 }
