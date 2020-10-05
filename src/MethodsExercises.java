@@ -11,7 +11,8 @@ public class MethodsExercises {
         System.out.println(mod(26, 5));
 
         //#2
-//        System.out.println(getInteger(3, 10));
+        System.out.println(getInteger(1, 10));
+        System.out.println(getInteger(5, 8));
 
     }
 
@@ -40,13 +41,27 @@ public class MethodsExercises {
 
     //#2
 
-   /* public static int getInteger(int min, int max) {
-        if (min >= 1 && max <= 10) {
-            System.out.println("This is in range");
-        }
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10");
-        int userInput = sc.nextInt();
+    public static int getInteger(int min, int max) {
+       Scanner scan = new Scanner(System.in);
+        System.out.println("Give me a number between " + min + " and " + max);
+        int userInput = Integer.parseInt(scan.nextLine());
 
-    };*/
+
+        if(userInput < min){
+            System.out.println("This number is lower than " + min);
+            return getInteger(min, max);
+        } else if ( userInput > max) {
+            System.out.println("This number is bigger than " + max);
+            return getInteger(min, max);
+        }
+
+       return userInput;
+
+    };
+
+    //#3
+
+
+
+
 }
