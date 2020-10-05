@@ -111,6 +111,10 @@ public class ControlFlowExercises {
             userContinues = false;
         }
         while (userContinues) ;
+
+
+
+
     }
 //        Formatter l = new Formatter();
 //        l.format("%-6s %1s %-7s %1s %-6s", "Number", "|", "Squared", "|", "Cubed");
