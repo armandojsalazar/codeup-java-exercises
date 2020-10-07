@@ -53,8 +53,9 @@ public class Person {
 
 
     public void sayHello(){
-        String name = getName();
-        System.out.println(name + " says Hello!");
+//        String name = getName();
+//        System.out.println(name + " says Hello!");
+        System.out.printf("Hello, my name is %s", getName());
     }
 }
 
