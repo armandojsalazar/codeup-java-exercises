@@ -9,8 +9,8 @@ public static Movie[] movies = MoviesArray.findAll();
     public static Movie getAllMovies() {
         for (Movie movie : movies) {
             System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
-
         }
+        return getAllMovies();
     }
     public static void main(String[] args) {
         System.out.println("What would you like to do?\n" +
