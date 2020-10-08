@@ -6,28 +6,27 @@ public class ArraysExercises {
 //        int[] numbers = {1, 2, 3, 4, 5};
 //        System.out.println(numbers);
 
-        String[] persons = new String[3];
+        Person[] people = new Person[3];
 
-        persons[0] = "Penny";
-        persons[1] = "Mando";
-        persons[2] = "Denver";
+        people[0] = new Person("Penny");
+        people[1] = new Person ("Mando");
+        people[2] = new Person ("Denver");
 
 
 
-        String[] addPerson = Arrays.copyOf(persons, persons.length + 1);
+        Person[] addPerson = Arrays.copyOf(people, people.length + 1);
 
 //        addPerson[0] = "Penny2";
 //        addPerson[1] = "Mando2";
 //        addPerson[2] = "Denver2";
-        addPerson[3] = "Azalea";
+        addPerson[3] = new Person ("Azalea");
 
         System.out.println("addPerson = " + addPerson[3]);
 
-        for(String person: persons){
+        for(Person person: people){
             System.out.println("person = " + person);
         }
-
-        for (String person: addPerson){
+        for (Person person: addPerson){
             System.out.println("person = " + person);
         }
 
