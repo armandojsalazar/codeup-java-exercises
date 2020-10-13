@@ -41,8 +41,14 @@ hashMapsPractice();
 
     public static void hashMapsPractice(){
         HashMap<String, String> usernames = new HashMap<>();
+        HashMap<String, Post> postMaps = new HashMap<>();
+
         usernames.put("daboskillz", "Armando J S");
         usernames.putIfAbsent("daboskillz", "Armando Jesus S");
+
+        postMaps.putIfAbsent("20201013-5467767", new Post("Titles"));
+        postMaps.putIfAbsent("20201013-5467768", new Post("Titles 2"));
+        postMaps.putIfAbsent("20201013-5467769", new Post("Titles 3"));
 
         System.out.println("usernames.get(\"daboskillz\") = " + usernames.get("daboskillz"));
 
@@ -57,6 +63,16 @@ hashMapsPractice();
 
         System.out.println("usernames.containsValue(\"Armando Jesus S\") = " + usernames.containsValue("Armando Jesus S"));
         System.out.println("usernames.containsValue(\"Armando J S\") = " + usernames.containsValue("Armando J S"));
+
+        System.out.println("hashmap keySet");
+        for (String key : postMaps.keySet()){
+//            System.out.println("key = " + key);
+            postMaps.get(key).printTitleAndAuthor();
+        }
+        System.out.println("hashmap keySet");
+        for (Post post : postMaps.values()){
+            post.printTitleAndAuthor();
+        }
     }
 
 }
