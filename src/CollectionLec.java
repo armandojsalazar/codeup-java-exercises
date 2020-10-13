@@ -64,9 +64,14 @@ hashMapsPractice();
         System.out.println("usernames.containsValue(\"Armando Jesus S\") = " + usernames.containsValue("Armando Jesus S"));
         System.out.println("usernames.containsValue(\"Armando J S\") = " + usernames.containsValue("Armando J S"));
 
+//        postMaps.clear();
+
+        postMaps.remove("20201013-5467767");
+
+        if (!postMaps.isEmpty())
         System.out.println("hashmap keySet");
         for (String key : postMaps.keySet()){
-//            System.out.println("key = " + key);
+            System.out.println("key = " + key);
             postMaps.get(key).printTitleAndAuthor();
         }
         System.out.println("hashmap keySet");
