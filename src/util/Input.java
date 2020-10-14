@@ -10,13 +10,13 @@ public class Input {
 
 
     public String getString() {
-        System.out.println("Enter a word.");
+//        System.out.println("Enter a word.");
         String userInput = sc.nextLine();
         return userInput;
     }
 
     public boolean yesNo() {
-        System.out.println("Do you like Codeup?");
+//        System.out.println("Do you like Codeup?");
         String userInput = sc.nextLine();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             return true;
@@ -26,7 +26,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter a number.");
+//        System.out.println("Enter a number.");
         int userInput = sc.nextInt();
         if (userInput < min) {
             System.out.println("Enter a higher number");

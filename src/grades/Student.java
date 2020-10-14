@@ -40,7 +40,7 @@ public class Student {
     }
 
     public double getGradeAverage() {
-        int total = 0;
+        double total = 0;
         for (int grade : grades) {
             total += grade;
         }
