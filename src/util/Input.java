@@ -58,8 +58,12 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a decimal number less than 1 but greater than 0");
-        double userInput = sc.nextDouble();
-        return userInput;
+        try {
+            System.out.println("Enter a decimal number less than 1 but greater than 0");
+            double userInput = sc.nextDouble();
+            return userInput;
+        }catch(){
+
+        }
     }
 }
