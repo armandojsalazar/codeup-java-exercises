@@ -26,40 +26,72 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-//        System.out.println("Enter a number.");
-        int userInput = sc.nextInt();
-        if (userInput < min) {
+        System.out.println("Enter a number.");
+        int num;
+        try {
+            String input = sc.nextLine();
+            num = Integer.valueOf(input);
+        }catch(RuntimeException re){
+            System.out.println("You must enter an integer.");
+            return getInt(min,max);
+        }
+        if (num < min) {
             System.out.println("Enter a higher number");
             return getInt(min, max);
-        } else if (userInput > max) {
+        } else if (num > max) {
             System.out.println("Enter a lower number");
             return getInt(min, max);
         }
-        return userInput;
+        return num;
     }
 
     public int getInt() {
         System.out.println("Enter a number.");
-        int userInput = sc.nextInt();
-        return userInput;
+        int num;
+        String input = sc.nextLine();
+        try {
+            num = Integer.parseInt(input);
+        }catch(NumberFormatException nfex){
+            System.out.println("You must enter an integer");
+            return getInt();
+        }
+        return num;
     }
 
     public double getDouble(double min, double max) {
         System.out.println("Enter a decimal number less than 1");
-        double userInput = sc.nextDouble();
-        if (userInput < min) {
+        double num;
+
+        try{
+            String input = sc.nextLine();
+            num = Double.parseDouble(input);
+        }
+        catch(NumberFormatException nfex){
+            System.out.println("You must enter a double");
+            return getDouble();
+        }
+        if (num < min) {
             System.out.println("Enter a higher number decimal number less than 1");
             return getDouble(min, max);
-        } else if (userInput > max) {
+        } else if (num > max) {
             System.out.println("Enter a lower decimal number greater than 0");
             return getDouble(min, max);
         }
-        return userInput;
+        return num;
     }
 
     public double getDouble() {
-        System.out.println("Enter a decimal number less than 1 but greater than 0");
-        double userInput = sc.nextDouble();
-        return userInput;
+
+            System.out.println("Enter a decimal number less than 1 but greater than 0");
+            double num;
+            String input = sc.nextLine();
+            try{
+                num = Double.parseDouble(input);
+            }
+            catch(NumberFormatException nfex){
+                System.out.println("You must enter a double");
+                return getDouble();
+            }
+            return num;
     }
 }
